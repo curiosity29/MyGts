@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>65f89e21-fc8c-428d-97f2-5bf3708886f6</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Eigenv\Dominant.py</StartupFile>
+    <StartupFile>Nội suy\Invert.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -36,6 +36,9 @@
     <Compile Include="Giải pt\Bisection.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Giải pt\DayCung.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Ma trận\Bordering.py">
       <SubType>Code</SubType>
     </Compile>
@@ -52,6 +55,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Nội suy\Center.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nội suy\Invert.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Nội suy\Lagrange.py">

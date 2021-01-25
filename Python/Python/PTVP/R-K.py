@@ -142,12 +142,14 @@ precision_eps = 12;
 
 
 # Nhập dữ liệu
-expr      = input("Nhập hàm f(x, y)trong phương trình y' = f(x, y) = ");
-x_0       = float(input("Nhập giá trị ban đầu x_0 = "));
-y_0       = float(input(f"Nhập giá trị ban đầu y({x_0}) = "));
-h         = float(input("Nhập khoảng cách giữa 2 điểm liên tiếp h = "));
-n         = int(input("Nhập số mốc của lưới điểm n = "));
-s         = input("Nhập số nấc Runge-Kutta (1, 2, 3, 4 hoặc Heun):");
+#y' = f(x,y)
+expr      = "0.25*(x+1)*y*ln(50/y) "
+x_0       = 0
+y_0       = 2
+h         = 0.1
+n         = 4
+# input("Nhập số nấc Runge-Kutta (1, 2, 3, 4 hoặc Heun):");
+s         = 4
 
 # Giải PTVP
 s  = s if(s == "heun" or s == "Heun") else int(s); 
@@ -180,3 +182,11 @@ if(sol_expr != "NONE"):
 #}
 
 
+
+import matplotlib.pyplot as plt
+def PlotPairs(pairList):
+    t,x = zip(*pairList)
+    plt.scatter(t,x)
+    plt.show()
+
+PlotPairs(g)

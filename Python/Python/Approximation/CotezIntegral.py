@@ -56,4 +56,35 @@ def test1():
 
 
 
-print(test1())
+#print(test1())
+
+
+
+def Ln12(t, epsilon):
+    if not 1<=t<=2:
+        raise ArithmeticError
+
+    x = symbols('x')
+    f = 1/x
+    return Integral(f, 2**5, (1,t), epsilon, 4)
+
+
+#ln2 = Ln12(2, 10**-12)
+
+def Ln(x, epsilon):
+    n = 0
+    while x>2:
+        x/=2
+        n+=1
+    while x<1:
+        x*=2
+        n+=1
+
+    return n*ln2 + Ln12(x, epsilon)
+#print(Ln(123456, 10**-5))
+
+x = symbols('x')
+f = 1/(x**2+1)
+integral = 4*Integral(f, 10000, (0,1), 10**-7, 4)
+
+print(integral)
