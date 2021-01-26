@@ -143,11 +143,11 @@ precision_eps = 12;
 
 # Nhập dữ liệu
 #y' = f(x,y)
-expr      = "0.25*(x+1)*y*ln(50/y) "
+expr      = "x+y "
 x_0       = 0
-y_0       = 2
+y_0       = 1
 h         = 0.1
-n         = 4
+n         = 5
 # input("Nhập số nấc Runge-Kutta (1, 2, 3, 4 hoặc Heun):");
 s         = 4
 

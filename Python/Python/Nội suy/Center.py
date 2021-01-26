@@ -183,8 +183,8 @@ def Bessel_interpolation(arr_x, arr_y, x):
 
 start_time = time.time() # Ghi lại thời gian bắt đầu chạy code
 
-arr_x = [0.000, 0.250, 0.500, 0.750, 1.000, 1.250, 1.500, 1.750, 2.000, 2.250, 2.500, 2.750, 3.000]
-arr_y = [0.000, 0.074, 0.249, 0.486, 0.745, 1.006, 1.257, 1.493, 1.713, 1.920, 2.112, 2.291, 2.459]
+arr_x = [50,55,60]
+arr_y = [1.699, 1.7404,1.7782]
 x = 1.274
 
 # Stirling_interpolation(arr_x, arr_y, x)

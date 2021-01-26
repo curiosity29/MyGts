@@ -20,8 +20,8 @@ def init():
     y = []
     with open('interpolation_input.txt','r+') as f:
             for line in f.readlines():
-                xt = float(line.split(' ')[0])
-                yt = float(line.split(' ')[1])
+                xt = float(line.split()[0])
+                yt = float(line.split()[1])
                 check = True
                 for x_check in x:
                     if x_check == xt:

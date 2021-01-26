@@ -20,7 +20,7 @@ with open ('interpolation_input.txt','r') as f:
   for line in f:
     #print(line)
     try:
-      (_x,_y)=line.split(' ')
+      (_x,_y)=line.split()
       x.append(float(_x))
       y.append(float(_y))
     except ValueError:
@@ -122,19 +122,6 @@ def vienquanh_inverse(A):
 
 def pack3(theta,M,y):
     return vienquanh_inverse(M)@theta.T@y
-
-u=[u0,u1,u2,u3,u4,u10]
-
-theta=pack1(u,x)
-print(theta)
-
-M=pack2(theta)
-print(M)
-
-a=pack3(theta,M,y)
-print('Ma tran he so la: ')
-print(a)
-
 def find_y(x,u,a):
   y=0
   for i in range (0,len(u)):
@@ -148,6 +135,21 @@ def graph(x,y,u,a):
     y_test.append(find_y(x_test[i],u,a))
   plt.scatter(x,y,s=30,cmap='palete')
   plt.plot(x_test,y_test,'r')
+
+
+
+u=[u0,u1]
+
+theta=pack1(u,x)
+print(theta)
+
+M=pack2(theta)
+print(M)
+
+a=pack3(theta,M,y)
+print('Ma tran he so la: ')
+print(a)
+
 
 
 graph(x,y,u,a)

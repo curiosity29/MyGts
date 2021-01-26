@@ -85,6 +85,22 @@ def Ln(x, epsilon):
 
 x = symbols('x')
 f = 1/(x**2+1)
-integral = 4*Integral(f, 10000, (0,1), 10**-7, 4)
+#integral = 4*Integral(f, 10000, (0,1), 10**-7, 4)
 
+#print(integral)
+
+x = 0
+dx = 0.01
+dy = 0.01
+y = 0
+integral = 0
+
+x=dx/2
+while x<4.0:
+    y = dy/2
+    while y<6:
+        integral += ((x)**2+(y))*dx*dy
+        y+=dy
+    x+=dx
+    
 print(integral)

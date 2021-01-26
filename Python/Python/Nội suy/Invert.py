@@ -143,10 +143,10 @@ def Inverse_interpolation(arr_x, arr_y, y, eps):
 start_time = time.time() # Ghi lại thời gian bắt đầu chạy code
 
 # 2 mảng dưới là bảng số liệu của đề thi cuối kỳ Giải tích số - 20181 CTTN
-arr_x = [3,    6,    9,    12,    15,    18,    21,    24,    27,    30]
-arr_y = [1224, 3264, 6426, 10630, 15832, 19402, 22564, 24094, 24910, 25000] # n + 1 mốc nội suy
-y = 18529
-eps = 0.1 # Sai số
+arr_x = [2.4,       2.5,        2.6]
+arr_y = [0.0025,    -0.0484,    -0.0968] # n + 1 mốc nội suy
+y = 0
+eps = 0.001 # Sai số
 
 print("Tập nghiệm của phương trình f(x) =", y ,"là:\n", Inverse_interpolation(arr_x, arr_y, y, eps))
 

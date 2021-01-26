@@ -97,12 +97,20 @@ class bisection_oop:
 
 
 
-expr = "x^2 - 15"
-a    = 3
-b    = 5
-eps  = 10**-5
+expr = "x^26 -50*x +49"
+a    = 1.00000001
+b    = 2
+eps  = 10**-6
 
 uu = bisection_oop(a, b, eps, expr);
 sol = uu.Solve();
 
 print(f"Nghiệm của phương trình {expr} = 0 trên khoảng [{a}, {b}] với sai số {eps} là x = {sol}");
+
+
+r = 1.0484724139952564
+a = 30
+for i in range(25):
+    a = a*r + 30
+
+print("a= ", a)
