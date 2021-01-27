@@ -50,23 +50,23 @@ def RK4thOrder(func, yinit, x_range, h):
 def myFunc(t, vectorY):
     df = np.zeros((len(vectorY)))
 
-    y = vectorY[0]
-    z = vectorY[1]
+    x1 = vectorY[0]
+    y1 = vectorY[1]
 
 #########################       INPUT GOES HERE
 
     # y' = z
-    df[0] = z
+    df[0] = -2*x1+y1
     # z' = ty^2(1+sin(t)y) + yt^3
-    df[1] = t*y**2*(1+math.sin(t)*y) + t**3*y
+    df[1] = x1-2*y1
     return df
 
-h = 0.01    # độ dài 1 bước
-t0 = 0      # điểm bắt đầu
-tn = 1      # điểm kết thúc
+h = 0.1    # độ dài 1 bước
+t0 = 3      # điểm bắt đầu
+tn = 6      # điểm kết thúc
 
 y0 = 1      # giá trị đầu y(t0)
-z0 = 1      # giá trị đầu z(t0)
+z0 = -0.5      # giá trị đầu z(t0)
 
 # this work with more than 2 equation ...
 

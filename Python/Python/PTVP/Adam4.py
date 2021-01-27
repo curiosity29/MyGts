@@ -96,19 +96,20 @@ def ABM4thOrder(func, yinit, xspan, h):
 
     return [xsol, ysol]
 
-#############################   INPUT GOES HERE
-
 
 def myFunc(x, y):
-    return math.e**(-2*x)-2*y
+    result = np.zeros(len(y))
+#############################   INPUT GOES HERE
 
+    result[0] = 0.25*(x+1)*math.log(50/y)
+    return result
 
-h = 0.2
+h = 0.1
 
 x0 = 0
 xn = 2
 
-y0 = 0.1
+y0 = 2
 
 
 #############################   \INPUT GOES HERE
