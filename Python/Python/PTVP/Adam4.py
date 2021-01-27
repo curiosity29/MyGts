@@ -113,6 +113,8 @@ y0 = 0.1
 
 #############################   \INPUT GOES HERE
 
+x0 = float(x0)
+y0 = float(y0)
 xspan = np.array([x0, xn])
 yinit = np.array([y0])
 

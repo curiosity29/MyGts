@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>65f89e21-fc8c-428d-97f2-5bf3708886f6</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>PTVP\RK4.py</StartupFile>
+    <StartupFile>Python.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
